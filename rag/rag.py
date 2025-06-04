@@ -17,7 +17,7 @@ def get_file_paths(directory):
             file_paths.append(filepath)
     return file_paths
 
-def compute_image_similarity(image_paths, model_name="../../ckpt/blip2-opt-2.7b", k=5):
+def compute_image_similarity(image_paths, model_name="../../../ckpt/blip2-opt-2.7b", k=5):
     """计算图像列表中各图像间的相似度"""
     device = "cuda" if torch.cuda.is_available() else "cpu"
     processor = Blip2Processor.from_pretrained(model_name)
