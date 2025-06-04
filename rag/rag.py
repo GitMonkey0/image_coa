@@ -74,8 +74,8 @@ def save_results(result_dict, output_path):
 
 if __name__ == "__main__":
     # 设置参数
-    IMAGE_DIR = "../../data/UnsafeBench/data/train_images"  # 图像目录
-    OUTPUT_FILE = "../../data/UnsafeBench/exp/image_similarity_results.json"  # 输出文件
+    IMAGE_DIR = "../../../data/UnsafeBench/data/train_images"  # 图像目录
+    OUTPUT_FILE = "../../../data/UnsafeBench/exp/image_similarity_results.json"  # 输出文件
     TOP_K = 5  # 取前5相似的图像
 
     # 执行流程
