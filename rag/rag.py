@@ -17,7 +17,7 @@ def get_file_paths(directory):
             file_paths.append(filepath)
     return file_paths
 
-def compute_image_similarity(image_paths, model_name="Salesforce/blip2-opt-2.7b", k=5):
+def compute_image_similarity(image_paths, model_name="../../ckpt/blip2-opt-2.7b", k=5):
     """计算图像列表中各图像间的相似度"""
     device = "cuda" if torch.cuda.is_available() else "cpu"
     processor = Blip2Processor.from_pretrained(model_name)
@@ -74,8 +74,8 @@ def save_results(result_dict, output_path):
 
 if __name__ == "__main__":
     # 设置参数
-    IMAGE_DIR = "/path/to/your/images"  # 图像目录
-    OUTPUT_FILE = "image_similarity_results.json"  # 输出文件
+    IMAGE_DIR = "../../data/UnsafeBench/data/train_images"  # 图像目录
+    OUTPUT_FILE = "../../data/UnsafeBench/exp/image_similarity_results.json"  # 输出文件
     TOP_K = 5  # 取前5相似的图像
 
     # 执行流程
